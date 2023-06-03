@@ -21,7 +21,6 @@ function Photo(props: PhotoProps) {
     src,
     className = '',
     expandedClassName = '',
-    objectPosition = '100% 0%',
     caption = '',
   } = props;
   const [expanded, setExpanded] = useState<boolean>(false);
@@ -37,10 +36,9 @@ function Photo(props: PhotoProps) {
         src={src}
         width="300"
         height="200"
-        objectFit="cover"
-        objectPosition={objectPosition}
         className="rounded-xl"
         priority={true}
+        alt=''
       />
       <div className="text-center">{caption}</div>
     </div>
@@ -87,32 +85,32 @@ function Cover(props: CoverProps) {
           <div className="p-5">
             <div className="grid grid-cols-2 gap-3">
               <Photo
-                src={photos[0].src}
+                src={photos[0]?.src || ''}
                 className="transform -rotate-6"
                 expandedClassName="hover:translate-x-1/2 sm:hover:translate-x-0"
-                objectPosition={photos[0].objectPosition}
-                caption={photos[0].caption}
+                objectPosition={photos[0]?.objectPosition}
+                caption={photos[0]?.caption}
               />
               <Photo
-                src={photos[1].src}
+                src={photos[1]?.src || ''}
                 className="transform rotate-6 sm:-translate-x-6"
                 expandedClassName="hover:-translate-x-1/2 sm:hover:-translate-x-0"
-                objectPosition={photos[1].objectPosition}
-                caption={photos[1].caption}
+                objectPosition={photos[1]?.objectPosition}
+                caption={photos[1]?.caption}
               />
               <Photo
-                src={photos[2].src}
+                src={photos[2]?.src || ''}
                 className="transform -rotate-6 translate-y-4"
                 expandedClassName="hover:translate-x-1/2 sm:hover:translate-x-0"
-                objectPosition={photos[2].objectPosition}
-                caption={photos[2].caption}
+                objectPosition={photos[2]?.objectPosition}
+                caption={photos[2]?.caption}
               />
               <Photo
-                src={photos[3].src}
+                src={photos[3]?.src || ''}
                 className=" transform rotate-6 translate-y-4 sm:-translate-x-6"
                 expandedClassName="hover:-translate-x-1/2 sm:hover:-translate-x-0"
-                objectPosition={photos[3].objectPosition}
-                caption={photos[3].caption}
+                objectPosition={photos[3]?.objectPosition}
+                caption={photos[3]?.caption}
               />
             </div>
           </div>

@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import { useQuery } from 'react-query';
+// import { useQuery } from 'react-query';
 import { useState, useMemo, useEffect } from 'react';
 
 // Show a table of swapi people. This table will be paginated.
@@ -24,7 +24,7 @@ type Person = {
 
 const Swapi: NextPage = () => {
   const [page, setPage] = useState<number>(1);
-  const [data, setData] = useState<SwapiResponse>();
+  const [data] = useState<SwapiResponse>();
   const [isFetching, setIsFetching] = useState<boolean>(false);
 
   // const { data, error, isLoading, isFetching } = useQuery<SwapiResponse>(
@@ -34,19 +34,19 @@ const Swapi: NextPage = () => {
   // );
 
   useEffect(() => {
-    let cancel = false;
-    const fetchPage = async () => {
+    // let cancel = false;
+    const fetchPage = () => {
       setIsFetching(true);
-      const res = await fetch(`https://swapi.dev/api/people/?page=${page}`);
-      const results = await res.json();
-      if (!cancel) {
-        setData(results);
-      }
+      //const res = await fetch(`https://swapi.dev/api/people/?page=${page}`);
+      // const results = await res.json();
+      // if (!cancel) {
+      //   setData(results);
+      // }
       setIsFetching(false);
     };
     fetchPage();
     return () => {
-      cancel = true;
+      // cancel = true;
     };
   }, [page]);
 

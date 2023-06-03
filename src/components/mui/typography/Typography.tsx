@@ -1,5 +1,5 @@
-import React from 'react';
-import { Typography, TypographyProps } from '@mui/material';
+import React from "react";
+import { Typography, type TypographyProps } from "@mui/material";
 
 interface Props extends TypographyProps {
   children: React.ReactNode;

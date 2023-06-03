@@ -1,11 +1,11 @@
 import {
   List as Container,
-  ListProps,
+  type ListProps,
   ListItem as ListItemContainer,
   ListItemIcon,
   ListItemText,
   ListItemButton,
-} from '@mui/material';
+} from "@mui/material";
 
 interface ListItem {
   icon?: React.ReactNode;
@@ -18,10 +18,10 @@ interface Props extends ListProps {
 }
 
 async function copyTextToClipboard(text: string) {
-  if ('clipboard' in navigator) {
+  if ("clipboard" in navigator) {
     return await navigator.clipboard.writeText(text);
   } else {
-    return document.execCommand('copy', true, text);
+    return document.execCommand("copy", true, text);
   }
 }
 
@@ -32,12 +32,12 @@ export const List: React.FC<Props> = (props) => {
         return (
           <ListItemContainer key={i} disablePadding>
             <ListItemButton
-              onClick={() =>
-                item?.copyText && copyTextToClipboard(item?.copyText)
-              }
+              onClick={() => {
+                item?.copyText && void copyTextToClipboard(item?.copyText);
+              }}
             >
               {item.icon && <ListItemIcon>{item.icon}</ListItemIcon>}
-              <ListItemText primary={item.text} sx={{ overflow: 'hidden' }} />
+              <ListItemText primary={item.text} sx={{ overflow: "hidden" }} />
             </ListItemButton>
           </ListItemContainer>
         );

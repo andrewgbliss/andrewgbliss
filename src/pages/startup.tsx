@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import Image from 'next/image';
 
 const Startup: NextPage = () => {
   return (
@@ -7,7 +8,7 @@ const Startup: NextPage = () => {
         <div className="absolute w-full fade-in">
           <section>
             <div className="flex justify-between items-center w-full sm:py-8">
-              <img src="img/startup/logo.png" className="w-20" />
+              <Image src="img/startup/logo.png" className="w-20" alt='' />
               <nav className="text-xl text-white">
                 <a href="#" className="hover:underline">
                   Get Early Access
@@ -50,9 +51,10 @@ const Startup: NextPage = () => {
               data-aos-duration={1000}
               data-aos-once={true}
             >
-              <img
+              <Image
                 src={'img/startup/smart-protect-1.jpg'}
                 className="mx-auto"
+                alt=''
               />
               <h4>Anti-Spam</h4>
               <div className="pad">
@@ -67,9 +69,10 @@ const Startup: NextPage = () => {
               data-aos-duration={1000}
               data-aos-once={true}
             >
-              <img
+              <Image
                 src={'img/startup/smart-protect-2.jpg'}
                 className="mx-auto"
+                alt=''
               />
               <h4>Phishing Detect</h4>
               <div className="pad">
@@ -84,9 +87,10 @@ const Startup: NextPage = () => {
               data-aos-duration={1000}
               data-aos-once={true}
             >
-              <img
+              <Image
                 src={'img/startup/smart-protect-3.jpg'}
                 className="mx-auto"
+                alt=''
               />
               <h4>Smart Scan</h4>
               <div className="pad">
@@ -130,7 +134,7 @@ const Startup: NextPage = () => {
                   data-aos-duration={1000}
                   data-aos-once={true}
                 >
-                  <img src="/img/startup/feature-1.png" className="mx-auto" />
+                  <Image src="/img/startup/feature-1.png" className="mx-auto" alt='' />
                 </div>
               </div>
             </div>
@@ -148,9 +152,10 @@ const Startup: NextPage = () => {
                   data-aos-duration={1000}
                   data-aos-once={true}
                 >
-                  <img
+                  <Image
                     src="/img/startup/feature-2.png"
                     className="mx-auto sm:mx-0"
+                    alt=''
                   />
                 </div>
               </div>
@@ -265,22 +270,22 @@ const Startup: NextPage = () => {
         <section>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             <div className="pad flex justify-center items-center">
-              <img src="/img/startup/client-1.png" />
+              <Image src="/img/startup/client-1.png" alt="" />
             </div>
             <div className="pad flex justify-center items-center">
-              <img src="/img/startup/client-2.png" />
+              <Image src="/img/startup/client-2.png" alt="" />
             </div>
             <div className="pad flex justify-center items-center">
-              <img src="/img/startup/client-3.png" />
+              <Image src="/img/startup/client-3.png" alt="" />
             </div>
             <div className="pad flex justify-center items-center">
-              <img src="/img/startup/client-4.png" />
+              <Image src="/img/startup/client-4.png" alt="" />
             </div>
             <div className="pad flex justify-center items-center">
-              <img src="/img/startup/client-5.png" />
+              <Image src="/img/startup/client-5.png" alt="" />
             </div>
             <div className="pad flex justify-center items-center">
-              <img src="/img/startup/client-6.png" />
+              <Image src="/img/startup/client-6.png" alt="" />
             </div>
           </div>
         </section>

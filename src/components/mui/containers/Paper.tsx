@@ -1,4 +1,4 @@
-import { Paper as Container, PaperProps, Box } from '@mui/material';
+import { Paper as Container, type PaperProps, Box } from "@mui/material";
 
 interface Props extends PaperProps {
   children: React.ReactNode;

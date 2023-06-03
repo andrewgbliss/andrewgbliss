@@ -1,6 +1,6 @@
-import { useEffect, useState, useRef } from 'react';
-import { Transition } from '@headlessui/react';
-import useTriggerOnScroll from '../../../hooks/useTriggerOnScroll';
+import { useEffect, useState, useRef } from "react";
+import { Transition } from "@headlessui/react";
+import useTriggerOnScroll from "../../../hooks/useTriggerOnScroll";
 
 type Props = {
   children: React.ReactNode;
@@ -12,21 +12,21 @@ type Props = {
   show?: boolean;
 };
 
-const durations = new Map();
-durations.set(75, 'duration-75');
-durations.set(100, 'duration-100');
-durations.set(150, 'duration-150');
-durations.set(200, 'duration-200');
-durations.set(300, 'duration-300');
-durations.set(500, 'duration-500');
-durations.set(700, 'duration-700');
-durations.set(1000, 'duration-1000');
+const durations = new Map<number, string>();
+durations.set(75, "duration-75");
+durations.set(100, "duration-100");
+durations.set(150, "duration-150");
+durations.set(200, "duration-200");
+durations.set(300, "duration-300");
+durations.set(500, "duration-500");
+durations.set(700, "duration-700");
+durations.set(1000, "duration-1000");
 
 export const Fade: React.FC<Props> = ({
   children,
   duration = 1000,
   wait = 0,
-  opacity = ['opacity-0', 'opacity-100'],
+  opacity = ["opacity-0", "opacity-100"],
   fadeIn = true,
   fadeOut = false,
   show = false,
@@ -50,20 +50,20 @@ export const Fade: React.FC<Props> = ({
     setCanShow(show);
   }, [show]);
 
-  if (fadeIn) opacity = ['opacity-0', 'opacity-100'];
-  if (fadeOut) opacity = ['opacity-100', 'opacity-0'];
+  if (fadeIn) opacity = ["opacity-0", "opacity-100"];
+  if (fadeOut) opacity = ["opacity-100", "opacity-0"];
   const [opacityFrom, opacityTo] = opacity;
 
   return (
     <Transition
       show={canShow}
       appear={true}
-      enter={`transition ease-out ${durationClassName}`}
-      enterFrom={`transform scale-95 ${opacityFrom}`}
-      enterTo={`transform scale-100 ${opacityTo}`}
-      leave={`transition ease-out ${durationClassName}`}
-      leaveFrom={`transform scale-100 ${opacityTo}`}
-      leaveTo={`transform scale-95 ${opacityFrom}`}
+      enter={`transition ease-out ${durationClassName || ""}`}
+      enterFrom={`transform scale-95 ${opacityFrom || ""}`}
+      enterTo={`transform scale-100 ${opacityTo || ""}`}
+      leave={`transition ease-out ${durationClassName || ""}`}
+      leaveFrom={`transform scale-100 ${opacityTo || ""}`}
+      leaveTo={`transform scale-95 ${opacityFrom || ""}`}
     >
       {children}
     </Transition>

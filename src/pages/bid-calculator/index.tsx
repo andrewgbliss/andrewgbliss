@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import { Layout } from '../../components/views/bid-calculator/Layout';
-import { Calculator } from '../../components/views/bid-calculator/Calculator';
+import { useState, useEffect } from "react";
+import { Layout } from "../../components/views/bid-calculator/Layout";
+// import { Calculator } from '../../components/views/bid-calculator/Calculator';
 
 const BidCalculator = () => {
   const [showChild, setShowChild] = useState(false);
@@ -12,15 +12,11 @@ const BidCalculator = () => {
     return null;
   }
 
-  if (typeof window === 'undefined') {
+  if (typeof window === "undefined") {
     return <></>;
   }
 
-  return (
-    <Layout>
-      <Calculator />
-    </Layout>
-  );
+  return <Layout>{/* <Calculator /> */}</Layout>;
 };
 
 export default BidCalculator;

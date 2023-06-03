@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   AppBar,
   Toolbar,
@@ -12,8 +12,8 @@ import {
   useTheme,
   Slide,
   useMediaQuery,
-} from '@mui/material';
-import { Menu as MenuIcon } from '@mui/icons-material';
+} from "@mui/material";
+import { Menu as MenuIcon } from "@mui/icons-material";
 
 interface ScrollProps {
   children: React.ReactElement;
@@ -49,7 +49,7 @@ const NavLink: React.FC<NavLinkProps> = (props) => {
   const { href, children } = props;
   return (
     <Box pl={1}>
-      <Button href={href} style={{ color: '#fff' }} component="a">
+      <Button href={href} style={{ color: "#fff" }} component="a">
         {children}
       </Button>
     </Box>
@@ -72,18 +72,18 @@ const MenuLink: React.FC<MenuLinkProps> = (props) => {
 
 export const NavBar: React.FC = () => {
   const [menu, setMenu] = useState<null | HTMLElement>(null);
-  const open: boolean = Boolean(menu);
+  const open = Boolean(menu);
   const handleOpen = (e: React.MouseEvent<HTMLElement>) =>
     setMenu(e.currentTarget);
   const handleClose = () => setMenu(null);
   const theme = useTheme();
-  const mobile: boolean = useMediaQuery(theme.breakpoints.down('sm'));
+  const mobile = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <>
       <HideOnScroll>
         <AppBar
           style={{
-            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            backgroundColor: "rgba(0, 0, 0, 0.5)",
           }}
         >
           <Toolbar>
@@ -98,12 +98,12 @@ export const NavBar: React.FC = () => {
                   <Menu
                     anchorEl={menu}
                     anchorOrigin={{
-                      vertical: 'top',
-                      horizontal: 'right',
+                      vertical: "top",
+                      horizontal: "right",
                     }}
                     transformOrigin={{
-                      vertical: 'top',
-                      horizontal: 'right',
+                      vertical: "top",
+                      horizontal: "right",
                     }}
                     open={open}
                     onClose={handleClose}

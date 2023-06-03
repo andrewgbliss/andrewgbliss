@@ -5,7 +5,7 @@ import { styled } from '@mui/material/styles';
 import Theme from '../components/mui/theme/Theme';
 import Image from 'next/image';
 
-const Background = styled('main')(({ theme }) => ({
+const Background = styled('main')(() => ({
   minWidth: '100vw',
   minHeight: '100vh',
   backgroundColor: '#fff',

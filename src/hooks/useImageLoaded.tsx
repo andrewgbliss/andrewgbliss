@@ -24,7 +24,7 @@ export default function useImageLoaded() {
         setLoaded(true);
       }
     }
-    waitUntilLoaded();
+    void waitUntilLoaded();
   }, []);
 
   return loaded;

@@ -26,7 +26,7 @@ const Music: NextPage = () => {
     if (source) {
       source.src = `/audio/${key}.mp3`;
       audio.load();
-      audio.play();
+      void audio.play();
     }
   };
   return (
@@ -37,7 +37,7 @@ const Music: NextPage = () => {
           <div className="flex justify-center gap-5 p-5">
             <div className="bg-white p-2 rounded-xl">
               <ol>
-                {[...songs.keys()].map((k) => {
+                {[...songs.keys()].map((k: string) => {
                   return (
                     <li
                       key={k}

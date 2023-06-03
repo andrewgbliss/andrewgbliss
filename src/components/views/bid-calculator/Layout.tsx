@@ -32,7 +32,7 @@ type Props = {
 };
 
 export const Layout: React.FC<Props> = ({ children }) => {
-  const [darkMode, setDarkMode] = useLocalStorage('darkMode', false);
+  const [darkMode, setDarkMode] = useLocalStorage<boolean>('darkMode', false);
   return (
     <ThemeProvider theme={darkMode ? darkTheme : defaultTheme}>
       <CssBaseline />
