@@ -1,3 +1,187 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+
+  .full-screen {
+    @apply w-screen h-screen;
+    max-width: 100%;
+  }
+
+	 /* Table */
+	.tbl {
+		@apply table text-sm text-left;
+	}
+	.tbl-head {
+		@apply text-xs uppercase bg-blue-500 text-white;
+	}
+	.tbl-cell {
+		@apply py-3 px-6;
+	}
+	.input {
+		@apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight;
+	}
+
+  /* Utilities */
+  .pad {
+    @apply p-4 sm:p-6;
+  }
+  .pad-thin {
+    @apply p-2;
+  }
+  .pad-thick {
+    @apply p-6 sm:p-12;
+  }
+  .pady {
+    @apply py-6;
+  }
+  .pady-thin {
+    @apply py-2;
+  }
+  .padx {
+    @apply px-6;
+  }
+  .padx-thin {
+    @apply px-2;
+  }
+
+  /* Background */
+  .bg-banner-bk {
+    background: linear-gradient(rgba(18, 26, 46, 0.8), rgba(18, 26, 46, 0.8)),
+      url(/img/startup/banner-bk.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .bg-contact-bk {
+    background: linear-gradient(rgba(18, 26, 46, 0.8), rgba(18, 26, 46, 0.8)),
+      url(/img/startup/contact-bk.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .bg-gradient {
+    background: linear-gradient(168deg, #ffffff 55%, #00ffad 0);
+  }
+
+  /* Button */
+  .btn-primary {
+    @apply transition duration-500 ease-in-out bg-primary transform hover:-translate-y-2 text-black hover:text-white inline-block font-medium py-2 px-8 rounded-full text-lg;
+  }
+  .btn-secondary {
+    @apply transition duration-500 ease-in-out transform hover:-translate-y-2 bg-secondary text-white hover:text-white inline-block font-medium py-2 px-8 rounded-full text-lg;
+  }
+  .btn {
+    @apply transition duration-500 ease-in-out transform hover:-translate-y-2 text-secondary hover:bg-secondary hover:text-white inline-block font-medium py-2 px-8 rounded-full text-lg;
+  }
+  .btn-social-media {
+    @apply transition duration-500 ease-in-out transform hover:-translate-y-2 text-secondary text-xl px-2 py-1 rounded-full hover:bg-primary hover:text-white inline-block;
+  }
+
+  /* Animations */
+  .fade-in {
+    animation: animation-fade-in 1s ease-in-out 0.1s forwards;
+    opacity: 0;
+  }
+
+  .fade-in-slow {
+    animation: animation-fade-in 1s ease-in-out 2s forwards;
+    opacity: 0;
+  }
+
+  @keyframes animation-fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .label {
+    @apply text-purple-400 text-center rounded-xl border-8 border-pink-300 border-dashed p-4;
+  }
+  .hover-expand {
+    @apply transition duration-1000 ease-in-out transform hover:scale-150 hover:-translate-y-1 hover:rotate-0;
+  }
+  .expanded-photo {
+    @apply z-50;
+  }
+
+  .bg-marketing {
+    @apply bg-cover bg-no-repeat bg-center;
+    background-image: linear-gradient(
+        rgba(18, 26, 46, 0.9),
+        rgba(18, 26, 46, 0.3)
+      ),
+      url(/img/marketing/cover2.jpg);
+  }
+
+  /* Pages */
+  .page {
+    @apply md:py-16 bg-gray-100;
+  }
+
+  /* Paper */
+  .paper {
+    @apply rounded-xl border shadow-2xl;
+  }
+  .paper-form {
+    @apply paper w-full md:w-96 mx-auto px-16 py-8 bg-gray-50;
+  }
+
+  /* Flash Card */
+  .flip-card {
+    perspective: 1000px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card-flip {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-front {
+  }
+
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+
+  /* Memories */
+  .heart {
+    @apply scale-50;
+    position: relative;
+    width: 100px;
+    height: 90px;
+  }
+
+  .heart:before,
+  .heart:after {
+    @apply bg-purple-400;
+    position: absolute;
+    content: '';
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+  }
+
+  .heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+  }
+}
