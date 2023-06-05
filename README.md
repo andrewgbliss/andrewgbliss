@@ -1,28 +1,44 @@
-# Create T3 App
+<h2><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/> I'm Andrew Bliss! <img src="https://media.giphy.com/media/12oufCB0MyZ1Go/giphy.gif" width="50"></h2>
+<img align='right' src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="230">
+<p><em>Senior Software Engineer Looking For Work<img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> 
+</em></p>
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+[![Linkedin: andrewgbliss](https://img.shields.io/badge/-andrewgbliss-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/andrewgbliss/)](https://www.linkedin.com/in/andrewgbliss/)
+![GitHub followers](https://img.shields.io/github/followers/andrewgbliss?label=Follow&style=social)
+[![website](https://img.shields.io/badge/Website-46a2f1.svg?&style=flat-square&logo=Google-Chrome&logoColor=white&link=https://www.andrewgbliss.com/)](https://www.andrewgbliss.com/)
 
-## What's next? How do I make an app with this?
+### 📫 Like to meet me?
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+Pick a slot if you'd like to meet me and chat about anything you are passionate about - but make sure to describe the agenda
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+<a href="https://calendly.com/andrewgbliss/30min" target="_blank"><img width="498" alt="meet_link" src="https://user-images.githubusercontent.com/15426564/144297439-f530f383-e73e-41e0-9914-a9b7d3f432e5.png"></a>
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+### <img src="https://media.giphy.com/media/VgCDAzcKvsR6OM0uWg/giphy.gif" width="50"> A little more about me...
 
-## Learn More
+```javascript
+const andrewgbliss = {
+  code: ["Javascript", "PHP", "Python", "C#", "C++"],
+  askMeAbout: ["web dev", "tech", "app dev"],
+  technologies: {
+    backEnd: {
+      js: ["NextJs", "trpc"],
+    },
+    mobileApp: {
+      native: ["Flutter"],
+    },
+    devOps: ["Google Cloud", "Docker🐳", "Nginx"],
+    databases: ["Postgres"],
+    misc: ["Firebase", "Socket.IO", "Puppeteer"],
+  },
+  architecture: [
+    "Serverless Architecture",
+    "Progressive web applications",
+    "Single page applications",
+  ],
+  currentFocus: "Make apps to solve problems",
+  funFact:
+    "There are two ways to write error-free programs; only the third one works",
+};
+```
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
-
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
-
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
-
-## How do I deploy this?
-
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+<img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="60"> <em><b>I love connecting with different people</b> so if you want to say <b>hi, I'll be happy to meet you more!</b> 😊</em>
