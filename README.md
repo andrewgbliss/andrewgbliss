@@ -17,8 +17,8 @@ Pick a slot if you'd like to meet me and chat about anything you are passionate 
 
 ```javascript
 const andrewgbliss = {
-  code: ["Javascript", "PHP", "Python", "C#", "C++"],
-  askMeAbout: ["web dev", "tech", "app dev"],
+  code: ["React", "Node", "Typescript", "Postgres"],
+  askMeAbout: ["web dev", "tech", "algorithms"],
   technologies: {
     backEnd: {
       js: ["NextJs", "trpc"],
@@ -31,9 +31,9 @@ const andrewgbliss = {
     misc: ["Firebase", "Socket.IO", "Puppeteer"],
   },
   architecture: [
-    "Serverless Architecture",
-    "Progressive web applications",
     "Single page applications",
+    "Progressive web applications",
+    "Serverless Architecture",
   ],
   currentFocus: "Make apps to solve problems",
   funFact:

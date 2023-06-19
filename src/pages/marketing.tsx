@@ -1,19 +1,19 @@
-import { useState } from 'react';
-import type { NextPage } from 'next';
-import Image from 'next/image';
-import Link from 'next/link';
-import MenuIcon from '../components/icons/Menu';
+import { useState } from "react";
+import type { NextPage } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import MenuIcon from "../components/icons/Menu";
 
 const Marketing: NextPage = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
   return (
     <>
-      <header className="bg-primary fixed w-full z-50">
+      <header className="fixed z-50 w-full bg-primary">
         <div className="lud-container p-2 xl:px-4">
-          <div className="flex justify-between items-center">
+          <div className="flex items-center justify-between">
             <div className="flex-grow">
               <div>
-                <Link href="/">
+                <Link legacyBehavior href="/">
                   <a>
                     <Image
                       src="/img/marketing/brand.png"
@@ -27,7 +27,7 @@ const Marketing: NextPage = () => {
             </div>
             <div className="px-4">
               <input
-                className="text-black rounded-xl p-2"
+                className="rounded-xl p-2 text-black"
                 type="text"
                 placeholder="Search ..."
               />
@@ -35,16 +35,16 @@ const Marketing: NextPage = () => {
             <div>
               <nav>
                 <div className="hidden sm:flex">
-                  <div className="text-white flex flex-wrap">
-                    <a className="block pr-4" href={'/login'}>
+                  <div className="flex flex-wrap text-white">
+                    <a className="block pr-4" href={"/login"}>
                       Login
                     </a>
-                    <a className="block pr-2" href={'/register'}>
+                    <a className="block pr-2" href={"/register"}>
                       Sign Up
                     </a>
                   </div>
                 </div>
-                <div className="sm:hidden relative">
+                <div className="relative sm:hidden">
                   <div className="text-white">
                     <button
                       className="btn-icon"
@@ -54,12 +54,12 @@ const Marketing: NextPage = () => {
                     </button>
                   </div>
                   {showMenu && (
-                    <div className="absolute top-10 right-0 z-50 shadow-xl rounded p-2 bg-black">
-                      <div className="text-white flex flex-wrap">
-                        <a className="block pr-4" href={'/login'}>
+                    <div className="absolute right-0 top-10 z-50 rounded bg-black p-2 shadow-xl">
+                      <div className="flex flex-wrap text-white">
+                        <a className="block pr-4" href={"/login"}>
                           Login
                         </a>
-                        <a className="block pr-2" href={'/register'}>
+                        <a className="block pr-2" href={"/register"}>
                           Sign Up
                         </a>
                       </div>
@@ -72,19 +72,19 @@ const Marketing: NextPage = () => {
         </div>
       </header>
       <main>
-        <section className="bg-marketing text-white overflow-y-hidden">
-          <div className="md:w-2/4 mx-auto py-10 md:py-24">
+        <section className="bg-marketing overflow-y-hidden text-white">
+          <div className="mx-auto py-10 md:w-2/4 md:py-24">
             <div className="h-8" />
             <div>
-              <p className="pt-12 pb-6 px-4 md:px-0 md:py-6 text-center text-4xl uppercase leading-normal">
+              <p className="px-4 pb-6 pt-12 text-center text-4xl uppercase leading-normal md:px-0 md:py-6">
                 Please login
               </p>
-              <p className="py-6 px-4 md:px-0 text-center text-xl">
+              <p className="px-4 py-6 text-center text-xl md:px-0">
                 Please Login
               </p>
               <div className="pt-6 text-center">
-                <Link href="/login">
-                  <a className="btn btn-primary text-white w-64 cursor-pointer expand">
+                <Link legacyBehavior href="/login">
+                  <a className="btn btn-primary expand w-64 cursor-pointer text-white">
                     Login
                   </a>
                 </Link>
@@ -134,7 +134,7 @@ const Marketing: NextPage = () => {
           </div>
         </div> */}
           <div className="flex justify-center">
-            <div className="text-center py-4">
+            <div className="py-4 text-center">
               <div>Marketing Site</div>
               <div>Copyright &copy; {new Date().getFullYear()}</div>
             </div>

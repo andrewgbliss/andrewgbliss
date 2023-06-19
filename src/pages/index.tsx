@@ -1,16 +1,16 @@
-import { type NextPage } from 'next';
-import { useState, useRef } from 'react';
-import { FadeIn } from '../components/tailwind/animations';
-import { Paper, Screen } from '../components/tailwind/containers';
+import { type NextPage } from "next";
+import { useState, useRef } from "react";
+import { FadeIn } from "../components/tailwind/animations";
+import { Paper, Screen } from "../components/tailwind/containers";
 
-const allowedNames = ['Andy'];
+const allowedNames = ["Andy"];
 
 const Home: NextPage = () => {
   const [showLinks, setShowLinks] = useState<boolean>(false);
   const inputEl = useRef<HTMLInputElement>(null);
 
   const onButtonClick = () => {
-    if (allowedNames.indexOf(inputEl?.current?.value || '') > -1) {
+    if (allowedNames.indexOf(inputEl?.current?.value || "") > -1) {
       setShowLinks(true);
     }
   };
@@ -20,7 +20,7 @@ const Home: NextPage = () => {
       <Screen>
         <FadeIn show>
           <Paper className="w-96 bg-white">
-            <div className="p-2 flex flex-col gap-2">
+            <div className="flex flex-col gap-2 p-2">
               <FadeIn wait={2000}>
                 <p>Hello World!</p>
               </FadeIn>
@@ -29,7 +29,7 @@ const Home: NextPage = () => {
               </FadeIn>
               <FadeIn wait={6000}>
                 <input
-                  className="input focus:outline-none focus:shadow-outline"
+                  className="input focus:shadow-outline focus:outline-none"
                   ref={inputEl}
                   type="text"
                   placeholder="What is your name?"
@@ -71,20 +71,13 @@ const Home: NextPage = () => {
                       >
                         Beta Access
                       </a>
-                      <a
+                      {/* <a
                         className="btn btn-primary"
                         target="_blank"
                         href="/startup"
                       >
                         Startup
-                      </a>
-                      <a
-                        className="btn btn-primary"
-                        target="_blank"
-                        href="/hello-world"
-                      >
-                        Hello World
-                      </a>
+                      </a> */}
                       <a
                         className="btn btn-primary"
                         target="_blank"
@@ -92,20 +85,20 @@ const Home: NextPage = () => {
                       >
                         Swapi
                       </a>
-                      <a
+                      {/* <a
                         className="btn btn-primary"
                         target="_blank"
                         href="/memories"
                       >
                         Memories
-                      </a>
-                      <a
+                      </a> */}
+                      {/* <a
                         className="btn btn-primary"
                         target="_blank"
                         href="/bid-calculator"
                       >
                         Bid Calculator
-                      </a>
+                      </a> */}
                       <a
                         className="btn btn-primary"
                         target="_blank"
@@ -113,13 +106,13 @@ const Home: NextPage = () => {
                       >
                         Login
                       </a>
-                      <a
+                      {/* <a
                         className="btn btn-primary"
                         target="_blank"
                         href="/marketing"
                       >
                         Marketing
-                      </a>
+                      </a> */}
                     </div>
                   </FadeIn>
                 </>

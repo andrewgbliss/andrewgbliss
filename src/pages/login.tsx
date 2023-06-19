@@ -1,6 +1,6 @@
-import type { NextPage } from 'next';
-import TextField from '../components/tailwind/form/TextField';
-import Link from 'next/link';
+import type { NextPage } from "next";
+import TextField from "../components/tailwind/form/TextField";
+import Link from "next/link";
 
 const Login: NextPage = () => {
   return (
@@ -33,12 +33,12 @@ const Login: NextPage = () => {
             <hr />
           </div>
           <div className="pt-4 text-center">
-            <Link href="/forgot-password">
+            <Link legacyBehavior href="/forgot-password">
               <a className="hover:text-primary-light">Forgot Password?</a>
             </Link>
             <br />
             <br />
-            <Link href={'/register'}>
+            <Link legacyBehavior href={"/register"}>
               <a className={`hover:text-primary-light`}>
                 Don&apos;t have an account?
                 <br />

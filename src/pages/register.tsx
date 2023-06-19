@@ -1,6 +1,6 @@
-import type { NextPage } from 'next';
-import TextField from '../components/tailwind/form/TextField';
-import Link from 'next/link';
+import type { NextPage } from "next";
+import TextField from "../components/tailwind/form/TextField";
+import Link from "next/link";
 
 const Register: NextPage = () => {
   return (
@@ -48,8 +48,9 @@ const Register: NextPage = () => {
           </div>
           <div className="text-center">
             <Link
+              legacyBehavior
               href="/login"
-              className="text-primary hover:text-primary-light"
+              className="hover:text-primary-light text-primary"
             >
               Back to login
             </Link>

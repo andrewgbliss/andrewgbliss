@@ -1,158 +1,161 @@
-import type { NextPage } from 'next';
-import { Grid, Box, Divider, Link } from '@mui/material';
-import Theme from '../components/mui/theme/Theme';
-import { Paper, List, Chips } from '../components/mui/containers';
-import Gravatar from '../components/img/Gravatar';
-import { H4, H6, Caption, Body2 } from '../components/mui/typography';
-import { resume } from '../lib/resume';
+import type { NextPage } from "next";
+import { Grid, Box, Divider, Link, Container } from "@mui/material";
+import Theme from "../components/mui/theme/Theme";
+import { Paper, List, Chips } from "../components/mui/containers";
+import Gravatar from "../components/img/Gravatar";
+import { H4, H6, Caption, Body2 } from "../components/mui/typography";
+import { resume } from "../lib/resume";
 import {
   Home as HomeIcon,
   Email as EmailIcon,
   Phone as PhoneIcon,
   DateRange as DateRangeIcon,
   Link as LinkIcon,
-} from '@mui/icons-material';
-import { styled } from '@mui/material/styles';
-
-const Footer = styled('footer')(({ theme }) => ({
-  backgroundColor: theme.palette.primary.light,
-}));
+  Circle as CircleIcon,
+  School as SchoolIcon,
+} from "@mui/icons-material";
 
 const Resume: NextPage = () => {
   return (
     <Theme>
-      <Box p={2}>
-        <Grid container spacing={2}>
-          <Grid item xs={12} sm={5} md={4} lg={3}>
-            <Paper>
-              <Box textAlign="center">
-                <Gravatar email={resume.email} size={256} />
-              </Box>
-              <H4 py={1}>{resume.name}</H4>
-              <Caption color="textSecondary" gutterBottom>
-                {resume.bio}
-              </Caption>
-              <List
-                items={[
-                  {
-                    icon: <HomeIcon />,
-                    text: (
-                      <Caption>
-                        {resume.address.city}, {resume.address.state}
-                      </Caption>
-                    ),
-                  },
-                  {
-                    icon: <EmailIcon />,
-                    text: <Caption>{resume.email}</Caption>,
-                    copyText: resume.email,
-                  },
-                  {
-                    icon: <PhoneIcon />,
-                    text: <Caption>{resume.phone}</Caption>,
-                    copyText: resume.phone,
-                  },
-                ]}
-              />
-              <Divider />
-              <H6 pt={2}>{resume.education.school}</H6>
-              <List
-                items={[
-                  {
-                    icon: <DateRangeIcon />,
-                    text: (
-                      <Caption>
-                        {resume.education.from} to {resume.education.to}
-                      </Caption>
-                    ),
-                  },
-                ]}
-              />
-              <Body2 color="textSecondary" pb={2}>
-                {resume.education.name}
-              </Body2>
-              <Divider />
-              <List
-                items={resume.links.map((href) => {
-                  return {
-                    icon: <LinkIcon />,
-                    text: (
-                      <Caption>
-                        <Link
-                          target="_blank"
-                          rel="noreferrer"
-                          color="inherit"
-                          href={href}
-                          underline="hover"
-                        >
-                          {href}
-                        </Link>
-                      </Caption>
-                    ),
-                  };
+      <Box
+        py={2}
+        sx={{ backgroundColor: (theme) => theme.palette.primary.light }}
+      >
+        <Container>
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={5} md={4} lg={3}>
+              <Paper>
+                <Box
+                  textAlign="center"
+                  sx={{ display: "flex", justifyContent: "center" }}
+                >
+                  <Gravatar email={resume.email} size={256} />
+                </Box>
+                <H4 py={1} textAlign="center">
+                  {resume.name}
+                </H4>
+                <Caption color="textSecondary" gutterBottom>
+                  {resume.bio}
+                </Caption>
+                <List
+                  dense
+                  items={[
+                    {
+                      icon: <HomeIcon />,
+                      text: (
+                        <Caption>
+                          {resume.address.city}, {resume.address.state}
+                        </Caption>
+                      ),
+                    },
+                    {
+                      icon: <EmailIcon />,
+                      text: <Caption>{resume.email}</Caption>,
+                      copyText: resume.email,
+                    },
+                    {
+                      icon: <PhoneIcon />,
+                      text: <Caption>{resume.phone}</Caption>,
+                      copyText: resume.phone,
+                    },
+                  ]}
+                />
+                <Divider />
+                <H6 pt={2}>Education</H6>
+                <List
+                  dense
+                  items={[
+                    {
+                      icon: <SchoolIcon />,
+                      text: (
+                        <>
+                          <Box>
+                            <Body2>{resume.education.school}</Body2>
+                          </Box>
+                          <Box>
+                            <Caption>{resume.education.name}</Caption>
+                          </Box>
+                          <Box>
+                            <Caption>
+                              {resume.education.from} to {resume.education.to}
+                            </Caption>
+                          </Box>
+                        </>
+                      ),
+                    },
+                  ]}
+                />
+                <Divider />
+                <H6 pt={2}>Links</H6>
+                <List
+                  dense
+                  items={resume.links.map((href) => {
+                    return {
+                      icon: <LinkIcon />,
+                      text: (
+                        <Caption>
+                          <Link
+                            target="_blank"
+                            rel="noreferrer"
+                            color="inherit"
+                            href={href}
+                            underline="hover"
+                          >
+                            {href}
+                          </Link>
+                        </Caption>
+                      ),
+                    };
+                  })}
+                />
+              </Paper>
+            </Grid>
+            <Grid item xs={12} sm={7} md={8} lg={9}>
+              <Paper>
+                <H4 gutterBottom>Work Experience</H4>
+                {resume.workExperience.map((workExperience, i: number) => {
+                  return (
+                    <Box pb={2} key={i}>
+                      <H6>
+                        {workExperience.title} / {workExperience.company}
+                      </H6>
+                      <List
+                        dense
+                        items={[
+                          {
+                            icon: <DateRangeIcon />,
+                            text: `${workExperience.from} - ${workExperience.to}`,
+                          },
+                        ]}
+                      />
+                      <List
+                        dense
+                        items={workExperience.bulletpoints.map(
+                          (bulletpoint) => {
+                            return {
+                              icon: <CircleIcon fontSize="small" />,
+                              text: (
+                                <Body2 color="textSecondary">
+                                  {bulletpoint}
+                                </Body2>
+                              ),
+                            };
+                          }
+                        )}
+                      />
+                      <Chips chips={workExperience.skills} />
+                      {i < resume.workExperience.length - 1 && (
+                        <Divider sx={{ m: 0 }} />
+                      )}
+                    </Box>
+                  );
                 })}
-              />
-            </Paper>
+              </Paper>
+            </Grid>
           </Grid>
-          <Grid item xs={12} sm={7} md={8} lg={9}>
-            <Paper>
-              <H4 gutterBottom>Work Experience</H4>
-              {resume.workExperience.map((workExperience, i: number) => {
-                return (
-                  <Box py={2} key={i}>
-                    <H6>
-                      {workExperience.title} / {workExperience.company}
-                    </H6>
-                    <List
-                      dense
-                      items={[
-                        {
-                          icon: <DateRangeIcon />,
-                          text: `${workExperience.from} - ${workExperience.to}`,
-                        },
-                      ]}
-                    />
-                    <List
-                      dense
-                      items={workExperience.bulletpoints.map((bulletpoint) => {
-                        return {
-                          text: (
-                            <Body2 color="textSecondary">{bulletpoint}</Body2>
-                          ),
-                        };
-                      })}
-                    />
-                    <Chips chips={workExperience.skills} />
-                    <Divider />
-                  </Box>
-                );
-              })}
-            </Paper>
-          </Grid>
-        </Grid>
+        </Container>
       </Box>
-      <Footer>
-        <Grid
-          container
-          item
-          direction="column"
-          justifyContent="center"
-          alignItems="center"
-          sx={{
-            height: 128,
-          }}
-        >
-          <Link
-            target="_blank"
-            rel="noreferrer"
-            color="inherit"
-            href={'/'}
-            underline="hover"
-          >
-            andrewgbliss.com
-          </Link>
-        </Grid>
-      </Footer>
     </Theme>
   );
 };
