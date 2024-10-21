@@ -27,8 +27,10 @@ const andrewgbliss = {
     "Progressive web applications",
     "Serverless Architecture",
   ],
-  currentFocus: "Make apps to solve problems",
-  funFact: "1 out of 10 people agree that AI will be used to create fun facts.",
+  currentFocus:
+    "Abybyo - a platform for creating and sharing AI learning resources",
+  funFact:
+    "I'm a big fan of the work of [Jocko Willink](https://jocko.substack.com/p/the-art-of-leadership).",
 };
 ```
 
