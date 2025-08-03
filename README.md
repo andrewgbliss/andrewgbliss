@@ -12,32 +12,32 @@ https://gitlab.com/andrewgbliss
 ### <img src="https://media.giphy.com/media/VgCDAzcKvsR6OM0uWg/giphy.gif" width="50"> A little more about me...
 
 ```javascript
-const andrewgbliss = {
-  stack: ["google cloud", "react", "postgresql", "tailwindcss", "shadcn"],
-  askMeAbout: ["web dev", "tech", "security"],
-  technologies: {
-    frontEnd: {
-      js: ["react"],
-      css: ["tailwind css", "shadcn"],
+{
+  "stack": ["google cloud", "react", "postgresql", "tailwindcss", "shadcn"],
+  "askMeAbout": ["web dev", "tech", "security"],
+  "technologies": {
+    "frontEnd": {
+      "js": ["react"],
+      "css": ["tailwind css", "shadcn"]
     },
-    backEnd: {
-      js: ["node", "nextjs", "php", "go"],
+    "backEnd": {
+      "js": ["node", "nextjs", "php", "go"]
     },
-    linting: ["typescript"],
-    devOps: ["google cloud", "docker🐳", "nginx"],
-    databases: ["postgresql", "mysql", "sql server"],
+    "linting": ["typescript"],
+    "devOps": ["google cloud", "docker🐳", "nginx"],
+    "databases": ["postgresql", "mysql", "sql server"]
   },
-  architecture: [
+  "architecture": [
     "Single page applications",
     "Progressive web applications",
-    "Serverless Architecture",
+    "Serverless Architecture"
   ],
-  currentFocus: [
+  "currentFocus": [
     "Bliss Code - software, audio, create",
     "Abybyo - language learning"
   ],
-  funFact: "I'm a big fan of the work of [Bliss Code](https://www.blisscode.dev).",
-};
+  "funFact": "I'm a big fan of the work of [Bliss Code](https://www.blisscode.dev)."
+}
 ```
 
 <img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="60"> <em><b>I love connecting with different people</b> so if you want to say <b>hi 😊</em>
