@@ -1,5 +1,5 @@
 <h2>Andrew Bliss</h2>
-<p><em>Senior Software Engineer</em></p>
+<p><em>Software Engineer</em></p>
 
 [![Linkedin: andrewgbliss](https://img.shields.io/badge/-andrewgbliss-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/andrewgbliss/)](https://www.linkedin.com/in/andrewgbliss/)
 ![GitHub followers](https://img.shields.io/github/followers/andrewgbliss?label=Follow&style=social)
@@ -9,28 +9,30 @@
 
 ```javascript
 const andrewgbliss = {
-  code: ["React", "Node", "Typescript", "Postgres"],
+  stack: ["google cloud", "react", "postgresql", "tailwindcss", "shadcn"]
   askMeAbout: ["web dev", "tech", "security"],
   technologies: {
+    frontEnd: {
+      js: ["react"],
+      css: ["tailwind css", "shadcn"],
+    },
     backEnd: {
-      js: ["NextJs", "trpc"],
+      js: ["node", "nextjs", "php", "go"],
     },
-    mobileApp: {
-      native: ["Flutter"],
-    },
-    devOps: ["Google Cloud", "Docker🐳", "Nginx"],
-    databases: ["Postgres"],
-    misc: ["Firebase", "Socket.IO", "Puppeteer"],
+    linting: ["typescript"],
+    devOps: ["google cloud", "docker🐳", "nginx"],
+    databases: ["postgresql", "mysql", "sql server"],
   },
   architecture: [
     "Single page applications",
     "Progressive web applications",
     "Serverless Architecture",
   ],
-  currentFocus:
-    "Abybyo - a platform for creating and sharing AI learning resources",
-  funFact:
-    "I'm a big fan of the work of [Jocko Willink](https://jocko.substack.com/p/the-art-of-leadership).",
+  currentFocus: [
+    "Bliss Code - software, audio, create",
+    "Abybyo - language learning"
+  ],
+  funFact: "I'm a big fan of the work of [Bliss Code](https://www.blisscode.dev).",
 };
 ```
 
