@@ -13,7 +13,7 @@ https://gitlab.com/andrewgbliss
 
 ```javascript
 const andrewgbliss = {
-  stack: ["google cloud", "react", "postgresql", "tailwindcss", "shadcn"]
+  stack: ["google cloud", "react", "postgresql", "tailwindcss", "shadcn"],
   askMeAbout: ["web dev", "tech", "security"],
   technologies: {
     frontEnd: {
