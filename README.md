@@ -7,24 +7,24 @@ https://gitlab.com/andrewgbliss
 
 [![Linkedin: andrewgbliss](https://img.shields.io/badge/-andrewgbliss-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/andrewgbliss/)](https://www.linkedin.com/in/andrewgbliss/)
 ![GitHub followers](https://img.shields.io/github/followers/andrewgbliss?label=Follow&style=social)
-[![website](https://img.shields.io/badge/Website-46a2f1.svg?&style=flat-square&logo=Google-Chrome&logoColor=white&link=https://www.andrewgbliss.com/)](https://www.andrewgbliss.com/)
+[![website](https://img.shields.io/badge/Website-46a2f1.svg?&style=flat-square&logo=Google-Chrome&logoColor=white&link=https://andrewgbliss.github.io/)](https://andrewgbliss.github.io/)
 
 ### <img src="https://media.giphy.com/media/VgCDAzcKvsR6OM0uWg/giphy.gif" width="50"> A little more about me...
 
 ```javascript
 {
-  "stack": ["google cloud", "react", "postgresql", "tailwindcss", "shadcn"],
-  "askMeAbout": ["web dev", "tech", "security"],
+  "stack": ["react", "tailwind css", "shadcn", "google cloud", "postgresql"],
+  "askMeAbout": ["web dev", "tech", "security", "website design"],
   "technologies": {
     "frontEnd": {
       "js": ["react"],
       "css": ["tailwind css", "shadcn"]
     },
     "backEnd": {
-      "js": ["node", "nextjs", "php", "go"]
+      "js": ["node", "nextjs", "php", "go", "python"]
     },
     "linting": ["typescript"],
-    "devOps": ["google cloud", "docker🐳", "nginx"],
+    "devOps": ["google cloud", "docker🐳", "nginx", "kubernetes", "argocd"],
     "databases": ["postgresql", "mysql", "sql server"]
   },
   "architecture": [
@@ -33,10 +33,10 @@ https://gitlab.com/andrewgbliss
     "Serverless Architecture"
   ],
   "currentFocus": [
-    "Bliss Code - software, audio, create",
-    "Abybyo - language learning"
+    "Database performance",
+    "Query cache and partitioning"
   ],
-  "funFact": "I'm a big fan of the work of [Bliss Code](https://www.blisscode.dev)."
+  "funFact": "I'm a big fan of the work of [Kenney](https://kenney.itch.io)."
 }
 ```
 
